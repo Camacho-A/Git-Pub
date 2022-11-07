@@ -7,8 +7,8 @@ const app = express()
 // gets the drinks database (array)
 const drinks = require("./models/drinks")
 
-app.get("/drinks", (request, response) => {
-	response.send(drinks)
+app.get("/drinks/", (request, response) => {
+	response.render("drinks_index.ejs", {drinks})
 })
 
 app.get("/", (request, response) => {
@@ -19,5 +19,5 @@ app.get("/", (request, response) => {
 
 // ---------- Listen pn port ------------
 app.listen(process.env.PORT, () => {
-	console.log("listening in port 3001")
+	console.log("listening in port 3000")
 })
