@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitPub App</title>
 </head>
 <body>
 <h1>Welcome to the GitPub App! </h1>
+
+            <% drinks.forEach(drink => { %> 
+                <li>
+                    <%=drink.name.replace(/\w/, c => c.toUpperCase()) %> 
+                </li>
+            <% }) %>
 
 <style type="text/css">
   body {
