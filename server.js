@@ -1,5 +1,6 @@
 require("dotenv").config()
 
+const { request, response } = require("express")
 // --------- Require express & set app -----------
 const express = require("express")
 const app = express()
@@ -15,8 +16,12 @@ app.get("/", (request, response) => {
 	response.send("Welcome to the GitPub App!")
 })
 
+app.get("/drinks/:id", (request, response) => {
+	response.send(request.params.id)
+})
+
 
 // ---------- Listen pn port ------------
 app.listen(process.env.PORT, () => {
-	console.log("listening in port 3000")
+	console.log("listening in port 3001")
 })
