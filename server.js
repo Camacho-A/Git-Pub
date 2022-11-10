@@ -17,7 +17,10 @@ app.get("/", (request, response) => {
 })
 
 app.get("/drinks/:id", (request, response) => {
-	response.send(request.params.id)
+	response.render("drinks_show.ejs", {
+		drink: drinks[request.params.id],
+	
+	})
 })
 
 
