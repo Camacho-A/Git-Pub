@@ -7,19 +7,15 @@
     <title>GitPub App</title>
 </head>
 <body>
-<h1>Welcome to the GitPub App Drinks Section 🍸
-</h1>
+<h1>Welcome to the GitPub App Food Section 🍔 </h1>
 
 
-
-            <% drinks.forEach(function (drink, index){ %> 
+            <% foods.forEach(function (food, index){ %> 
                 <li>
-                  <a href="/drinks/<%= index %>">
-                    <%=drink.name.replace(/\w/, c => c.toUpperCase()) %> 
+                  <a href="/foods/<%= index %>">
+                    <%=food.name%> 
                 </a></li>
             <% }) %>
-
-
 
 
 <style type="text/css">
