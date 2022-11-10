@@ -9,11 +9,17 @@
 <body>
 <h1>Welcome to the GitPub App! </h1>
 
-            <% drinks.forEach(drink => { %> 
+
+
+            <% drinks.forEach(function (drink, index){ %> 
                 <li>
+                  <a href="/drinks/<%= index %>">
                     <%=drink.name.replace(/\w/, c => c.toUpperCase()) %> 
-                </li>
+                </a></li>
             <% }) %>
+
+
+
 
 <style type="text/css">
   body {
